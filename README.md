@@ -22,7 +22,7 @@
 
 Visual Novels resource browser.
 
-Requires .NET Framework v4.6 or newer (https://www.microsoft.com/net)
+~~Requires .NET Framework v4.6 or newer (https://www.microsoft.com/net)~~
 
 [Supported formats](https://morkt.github.io/GARbro/supported.html)
 
