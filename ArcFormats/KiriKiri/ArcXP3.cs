@@ -36,7 +36,7 @@ using System.Security.Cryptography;
 using System.Diagnostics;
 using GameRes.Compression;
 using GameRes.Utility;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 
 namespace GameRes.Formats.KiriKiri
 {
@@ -368,11 +368,11 @@ NextEntry:
         public override ResourceOptions GetDefaultOptions ()
         {
             return new Xp3Options {
-                Version             = Properties.Settings.Default.XP3Version,
-                Scheme              = GetScheme (Properties.Settings.Default.XP3Scheme),
-                CompressIndex       = Properties.Settings.Default.XP3CompressHeader,
-                CompressContents    = Properties.Settings.Default.XP3CompressContents,
-                RetainDirs          = Properties.Settings.Default.XP3RetainStructure,
+                Version             = ArcFormats.Properties.Settings.Default.XP3Version,
+                Scheme              = GetScheme (ArcFormats.Properties.Settings.Default.XP3Scheme),
+                CompressIndex       = ArcFormats.Properties.Settings.Default.XP3CompressHeader,
+                CompressContents    = ArcFormats.Properties.Settings.Default.XP3CompressContents,
+                RetainDirs          = ArcFormats.Properties.Settings.Default.XP3RetainStructure,
             };
         }
 

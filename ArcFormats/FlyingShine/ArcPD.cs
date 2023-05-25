@@ -29,7 +29,7 @@ using System.ComponentModel.Composition;
 using System.IO;
 using System.Linq;
 using System.Text;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 using GameRes.Utility;
 
 namespace GameRes.Formats.Fs
@@ -93,7 +93,7 @@ namespace GameRes.Formats.Fs
 
         public override ResourceOptions GetDefaultOptions ()
         {
-            return new PdOptions { ScrambleContents = Properties.Settings.Default.PDScrambleContents };
+            return new PdOptions { ScrambleContents = ArcFormats.Properties.Settings.Default.PDScrambleContents };
         }
 
         public override object GetCreationWidget ()

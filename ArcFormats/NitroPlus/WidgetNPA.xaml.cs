@@ -1,8 +1,8 @@
 ﻿using System.Windows.Controls;
 using System.Linq;
-using GameRes.Formats.Properties;
+using ArcFormats.Properties;
 using GameRes.Formats.NitroPlus;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 
 namespace GameRes.Formats.GUI
 {

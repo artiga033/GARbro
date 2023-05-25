@@ -27,7 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.IO;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 using GameRes.Utility;
 
 namespace GameRes.Formats.Leaf
@@ -128,7 +128,7 @@ namespace GameRes.Formats.Leaf
         public override ResourceOptions GetDefaultOptions ()
         {
             return new LeafOptions {
-                Key = GetTitleKey (Properties.Settings.Default.LEAFTitle),
+                Key = GetTitleKey (ArcFormats.Properties.Settings.Default.LEAFTitle),
             };
         }
 

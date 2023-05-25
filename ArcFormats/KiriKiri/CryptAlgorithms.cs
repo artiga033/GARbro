@@ -70,7 +70,7 @@ namespace GameRes.Formats.KiriKiri
 
         public virtual void Encrypt (Xp3Entry entry, long offset, byte[] values, int pos, int count)
         {
-            throw new NotImplementedException (Strings.arcStrings.MsgEncNotImplemented);
+            throw new NotImplementedException (ArcFormats.Strings.arcStrings.MsgEncNotImplemented);
         }
 
         /// <summary>

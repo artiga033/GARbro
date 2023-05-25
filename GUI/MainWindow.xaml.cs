@@ -37,13 +37,13 @@ using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Threading;
-using Microsoft.VisualBasic.FileIO;
 using GARbro.GUI.Properties;
 using GARbro.GUI.Strings;
 using GameRes;
 using Rnd.Windows;
 using Microsoft.Win32;
 using NAudio.Wave;
+using Microsoft.VisualBasic.FileIO;
 
 namespace GARbro.GUI
 {

@@ -33,7 +33,7 @@ using System.Numerics;
 using System.IO;
 using System.Text;
 using GameRes.Compression;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 
 namespace GameRes.Formats.RenPy
 {
@@ -51,7 +51,7 @@ namespace GameRes.Formats.RenPy
     public class RpaOpener : ArchiveFormat
     {
         public override string         Tag { get { return "RPA"; } }
-        public override string Description { get { return Strings.arcStrings.RPADescription; } }
+        public override string Description { get { return ArcFormats.Strings.arcStrings.RPADescription; } }
         public override uint     Signature { get { return 0x2d415052; } } // "RPA-"
         public override bool  IsHierarchic { get { return true; } }
         public override bool      CanWrite { get { return true; } }
@@ -133,7 +133,7 @@ namespace GameRes.Formats.RenPy
 
         public override ResourceOptions GetDefaultOptions ()
         {
-            return new RpaOptions { Key = Properties.Settings.Default.RPAKey };
+            return new RpaOptions { Key = ArcFormats.Properties.Settings.Default.RPAKey };
         }
 
         public override object GetCreationWidget ()

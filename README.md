@@ -1,5 +1,24 @@
-GARbro
-======
+# Note: This fork makes little effort developing new features.
+
+## This fork is tend to migrate the project to that of a modern .NET application and do more often releases.
+
+### The followings have been done to migrate this appliction to new .NET Sdk Project style.
+
+- The projects `ArcFormats`,`GameRes`,`GARbro.GUI`,`Net20` has been migrated to new sdk style `csproj`, and targets `.NET Framework 4.8`
+- the `.gitattributes` and `.gitignore` has been replaced with the defaults of VS2022.
+- The `ArcFormats\Resources\Formats.dat` has been renamed to `ArcFormats\GameData\Formats.dat` so that the msbuild's `COPY` operation can directly do the copy to the right path.
+- Project references relations has been changed, and the old namespace overwriten rule is deprecated in new sdk.
+- Nuget packages are now managed by `csproj` `PackageReference` Keys, so all `packages.config` files are deleted.
+
+### The followings will be done to continue upgrade .NET runtime to latest .NET 6 / 7
+
+- Some of the packages references still don't support .NET Standard yet. Future plans are to replace them with newer implmentations.
+
+---
+
+---
+
+# GARbro
 
 Visual Novels resource browser.
 
@@ -9,14 +28,13 @@ Requires .NET Framework v4.6 or newer (https://www.microsoft.com/net)
 
 [Download latest release](https://github.com/morkt/GARbro/releases)
 
-Operation
----------
+## Operation
 
-Browse through the file system to a file of interest.  If you think it's an
-archive, try to 'enter' inside by pressing 'Enter' on it.  If GARbro
+Browse through the file system to a file of interest. If you think it's an
+archive, try to 'enter' inside by pressing 'Enter' on it. If GARbro
 recognizes format its contents will be displayed just like regular file
-system.  Some archives are encrypted, so you will be asked for credentials or
-a supposed game title.  If game is not listed among presented options then
+system. Some archives are encrypted, so you will be asked for credentials or
+a supposed game title. If game is not listed among presented options then
 most likely archive could not be opened by current GARbro version.
 
 Files could be extracted from archives by pressing 'F4', with all images and
@@ -24,12 +42,11 @@ audio converted to common formats in the process, of course if game format
 itself is recognized.
 
 When displaying file system contents GARbro assigns types to files based on
-their names extension (so it's not always correct).  If types are misapplied,
+their names extension (so it's not always correct). If types are misapplied,
 it could be changed by selecting files and assigning type manually via context
 menu 'Assign file type'.
 
-GUI Hotkeys
------------
+## GUI Hotkeys
 
 <table>
 <tr><td><kbd>Enter</kbd></td><td>                   Try to open selected file as archive -OR- playback audio file</td></tr>
@@ -55,8 +72,7 @@ GUI Hotkeys
 <tr><td><kbd>Ctrl</kbd>+<kbd>Q</kbd></td><td>       Exit</td></tr>
 </table>
 
-Author
-------
+## Author
 
 Written by [morkt](https://github.com/morkt/GARbro) under [MIT License](https://github.com/morkt/GARbro/blob/master/LICENSE).
 

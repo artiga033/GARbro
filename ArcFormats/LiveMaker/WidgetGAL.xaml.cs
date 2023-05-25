@@ -6,7 +6,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using GameRes.Formats.LiveMaker;
 using GameRes.Formats.Properties;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 
 namespace GameRes.Formats.GUI
 {

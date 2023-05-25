@@ -28,7 +28,7 @@ using System.IO;
 using System.Linq;
 using GameRes.Compression;
 using GameRes.Cryptography;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 using GameRes.Utility;
 
 namespace GameRes.Formats.Musica
@@ -319,7 +319,7 @@ namespace GameRes.Formats.Musica
 
         public override ResourceOptions GetDefaultOptions ()
         {
-            return new PazOptions { Scheme = GetScheme (Properties.Settings.Default.PAZTitle) };
+            return new PazOptions { Scheme = GetScheme (ArcFormats.Properties.Settings.Default.PAZTitle) };
         }
 
         public override object GetAccessWidget ()

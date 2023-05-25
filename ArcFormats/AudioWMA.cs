@@ -136,7 +136,7 @@ namespace GameRes.Formats
 
         private static long GetDuration (IMFSourceReader reader)
         {
-            var variantPtr = Marshal.AllocHGlobal (MarshalHelpers.SizeOf<PropVariant>());
+            var variantPtr = Marshal.AllocHGlobal ( MarshalHelpers.SizeOf<PropVariant>());
             try
             {
                 int hResult = reader.GetPresentationAttribute (MediaFoundationInterop.MF_SOURCE_READER_MEDIASOURCE,

@@ -30,7 +30,7 @@ using System.Text;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using GameRes.Utility;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 
 namespace GameRes.Formats.Ikura
 {
@@ -207,7 +207,7 @@ namespace GameRes.Formats.Ikura
         public override ResourceOptions GetDefaultOptions ()
         {
             return new IsfOptions {
-                Secret = GetSecret (Properties.Settings.Default.ISFScheme) ?? new byte[0]
+                Secret = GetSecret (ArcFormats.Properties.Settings.Default.ISFScheme) ?? new byte[0]
             };
         }
 

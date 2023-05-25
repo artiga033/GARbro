@@ -29,7 +29,7 @@ using System.Text;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using GameRes.Compression;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 using GameRes.Utility;
 
 namespace GameRes.Formats.YuRis
@@ -173,9 +173,9 @@ namespace GameRes.Formats.YuRis
         {
             return new YpfOptions
             {
-                Key     = Properties.Settings.Default.YPFKey,
-                Version = Properties.Settings.Default.YPFVersion,
-                Scheme  = Properties.Settings.Default.YPFScheme,
+                Key     = ArcFormats.Properties.Settings.Default.YPFKey,
+                Version = ArcFormats.Properties.Settings.Default.YPFVersion,
+                Scheme  = ArcFormats.Properties.Settings.Default.YPFScheme,
             };
         }
 

@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 using Microsoft.Win32;
 
 namespace GameRes.Formats.GUI

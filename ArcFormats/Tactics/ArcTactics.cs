@@ -29,7 +29,7 @@ using System.ComponentModel.Composition;
 using System.IO;
 using System.Linq;
 using GameRes.Compression;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 using GameRes.Utility;
 
 namespace GameRes.Formats.Tactics
@@ -382,10 +382,10 @@ namespace GameRes.Formats.Tactics
 
         public override ResourceOptions GetDefaultOptions ()
         {
-            string title = Properties.Settings.Default.TacticsArcTitle;
+            string title = ArcFormats.Properties.Settings.Default.TacticsArcTitle;
             ArcScheme scheme = null;
-            if (!KnownSchemes.TryGetValue (title, out scheme) && !string.IsNullOrEmpty (Properties.Settings.Default.TacticsArcPassword))
-                scheme = new ArcScheme (Properties.Settings.Default.TacticsArcPassword);
+            if (!KnownSchemes.TryGetValue (title, out scheme) && !string.IsNullOrEmpty (ArcFormats.Properties.Settings.Default.TacticsArcPassword))
+                scheme = new ArcScheme (ArcFormats.Properties.Settings.Default.TacticsArcPassword);
             return new TacticsOptions { Scheme = scheme };
         }
 

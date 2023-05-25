@@ -32,7 +32,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using GameRes.Compression;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 using GameRes.Formats.Properties;
 using GameRes.Strings;
 
@@ -382,10 +382,10 @@ namespace GameRes.Formats.NitroPlus
         public override ResourceOptions GetDefaultOptions ()
         {
             return new NpaOptions {
-                Scheme           = GetScheme (Properties.Settings.Default.NPAScheme),
-                CompressContents = Properties.Settings.Default.NPACompressContents,
-                Key1             = (int)Properties.Settings.Default.NPAKey1,
-                Key2             = (int)Properties.Settings.Default.NPAKey2,
+                Scheme           = GetScheme (ArcFormats.Properties.Settings.Default.NPAScheme),
+                CompressContents = ArcFormats.Properties.Settings.Default.NPACompressContents,
+                Key1             = (int)ArcFormats.Properties.Settings.Default.NPAKey1,
+                Key2             = (int)ArcFormats.Properties.Settings.Default.NPAKey2,
             };
         }
 

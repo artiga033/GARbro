@@ -28,7 +28,7 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.IO;
 using System.Text;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 using GameRes.Utility;
 
 namespace GameRes.Formats.Eagls
@@ -181,8 +181,8 @@ namespace GameRes.Formats.Eagls
         public override ResourceOptions GetDefaultOptions ()
         {
             IEntryEncryption enc = null;
-            if (!string.IsNullOrEmpty (Properties.Settings.Default.EAGLSEncryption))
-                KnownSchemes.TryGetValue (Properties.Settings.Default.EAGLSEncryption, out enc);
+            if (!string.IsNullOrEmpty (ArcFormats.Properties.Settings.Default.EAGLSEncryption))
+                KnownSchemes.TryGetValue (ArcFormats.Properties.Settings.Default.EAGLSEncryption, out enc);
             return new EaglsOptions { Encryption = enc };
         }
 

@@ -39,7 +39,7 @@ namespace GameRes.Formats.Liar
     public class LwgOpener : ArchiveFormat
     {
         public override string         Tag { get { return "LWG"; } }
-        public override string Description { get { return Strings.arcStrings.LWGDescription; } }
+        public override string Description { get { return ArcFormats.Strings.arcStrings.LWGDescription; } }
         public override uint     Signature { get { return 0x0001474C; } } // 'LG'
         public override bool  IsHierarchic { get { return false; } }
 

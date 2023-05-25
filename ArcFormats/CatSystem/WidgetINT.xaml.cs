@@ -33,7 +33,7 @@ using System.Windows.Data;
 using System.Windows;
 using Microsoft.Win32;
 using GameRes.Formats.CatSystem;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 
 namespace GameRes.Formats.GUI
 {
@@ -45,7 +45,7 @@ namespace GameRes.Formats.GUI
         public WidgetINT ()
         {
             InitializeComponent();
-            ViewModel = new IntEncryptionViewModel (GameRes.Formats.Properties.Settings.Default.INTEncryption);
+            ViewModel = new IntEncryptionViewModel (ArcFormats.Properties.Settings.Default.INTEncryption);
             this.DataContext = ViewModel;
         }
 
@@ -120,7 +120,7 @@ namespace GameRes.Formats.GUI
             }
             catch
             {
-                return new ValidationResult (false, Strings.arcStrings.INTKeyRequirement);
+                return new ValidationResult (false, ArcFormats.Strings.arcStrings.INTKeyRequirement);
             }
             return new ValidationResult (true, null);
         }
@@ -132,7 +132,7 @@ namespace GameRes.Formats.GUI
         {
             Source = src ?? new IntEncryptionInfo();
             KnownKeys = IntOpener.KnownSchemes;
-            m_message = Strings.arcStrings.INTMessage1;
+            m_message = ArcFormats.Strings.arcStrings.INTMessage1;
         }
 
         public IntEncryptionInfo Source { get; set; }

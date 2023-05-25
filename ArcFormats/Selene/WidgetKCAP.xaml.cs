@@ -1,9 +1,9 @@
 ﻿using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using GameRes.Formats.Properties;
+using ArcFormats.Properties;
 using GameRes.Formats.Selene;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 
 namespace GameRes.Formats.GUI
 {

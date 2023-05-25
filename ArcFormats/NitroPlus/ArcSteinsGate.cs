@@ -28,7 +28,7 @@ using System.Text;
 using System.Linq;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 using GameRes.Utility;
 
 namespace GameRes.Formats.NitroPlus
@@ -137,7 +137,7 @@ namespace GameRes.Formats.NitroPlus
         public override ResourceOptions GetDefaultOptions ()
         {
             return new SteinsGateOptions {
-                FileNameEncoding = GetEncoding (Properties.Settings.Default.SGFileNameEncoding),
+                FileNameEncoding = GetEncoding (ArcFormats.Properties.Settings.Default.SGFileNameEncoding),
             };
         }
 

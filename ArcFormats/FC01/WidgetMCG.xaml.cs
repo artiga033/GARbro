@@ -1,5 +1,5 @@
 ﻿using GameRes.Formats.FC01;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 using System;
 using System.Collections.Generic;
 using System.Globalization;

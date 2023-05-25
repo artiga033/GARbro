@@ -30,7 +30,7 @@ using System.Diagnostics;
 using System.IO;
 using GameRes.Compression;
 using GameRes.Utility;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 
 namespace GameRes.Formats.NonColor
 {
@@ -265,7 +265,7 @@ namespace GameRes.Formats.NonColor
 
         public override ResourceOptions GetDefaultOptions ()
         {
-            return new ArcDatOptions { Scheme = Properties.Settings.Default.NCARCScheme };
+            return new ArcDatOptions { Scheme = ArcFormats.Properties.Settings.Default.NCARCScheme };
         }
 
         public override object GetAccessWidget ()

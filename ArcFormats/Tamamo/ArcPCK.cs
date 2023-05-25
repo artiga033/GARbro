@@ -32,7 +32,7 @@ using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using GameRes.Cryptography;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 using ICSharpCode.SharpZipLib.BZip2;
 
 namespace GameRes.Formats.Tamamo
@@ -237,7 +237,7 @@ namespace GameRes.Formats.Tamamo
         public override ResourceOptions GetDefaultOptions ()
         {
             return new PckOptions {
-                Key = GetKeyForTitle (Properties.Settings.Default.PCKTitle)
+                Key = GetKeyForTitle (ArcFormats.Properties.Settings.Default.PCKTitle)
             };
         }
 

@@ -28,7 +28,7 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.IO;
 using System.Text;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 using GameRes.Utility;
 
 namespace GameRes.Formats.Mg
@@ -183,7 +183,7 @@ namespace GameRes.Formats.Mg
 
         public override ResourceOptions GetDefaultOptions ()
         {
-            return new MgOptions { Key = GetKey (Properties.Settings.Default.MGPKTitle) };
+            return new MgOptions { Key = GetKey (ArcFormats.Properties.Settings.Default.MGPKTitle) };
         }
 
         public override object GetAccessWidget ()

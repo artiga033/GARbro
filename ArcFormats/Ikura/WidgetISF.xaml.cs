@@ -1,5 +1,5 @@
 ﻿using GameRes.Formats.Ikura;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 using System.Linq;
 using System.Windows.Controls;
 

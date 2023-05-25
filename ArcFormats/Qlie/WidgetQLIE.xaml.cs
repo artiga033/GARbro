@@ -1,5 +1,5 @@
 ﻿using GameRes.Formats.Qlie;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 using System.Windows.Controls;
 using System.Linq;
 

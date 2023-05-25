@@ -29,7 +29,7 @@ using System.ComponentModel.Composition;
 using System.IO;
 using System.Linq;
 using GameRes.Compression;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 
 namespace GameRes.Formats.Marble
 {
@@ -205,7 +205,7 @@ namespace GameRes.Formats.Marble
 
         public override ResourceOptions GetDefaultOptions ()
         {
-            return new MblOptions { PassPhrase = Properties.Settings.Default.MBLPassPhrase };
+            return new MblOptions { PassPhrase = ArcFormats.Properties.Settings.Default.MBLPassPhrase };
         }
 
         public override object GetAccessWidget ()

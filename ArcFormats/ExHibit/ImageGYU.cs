@@ -33,7 +33,7 @@ using System.Windows.Media;
 using GameRes.Utility;
 using GameRes.Compression;
 using GameRes.Cryptography;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 using System.Collections;
 
 namespace GameRes.Formats.ExHibit
@@ -134,7 +134,7 @@ namespace GameRes.Formats.ExHibit
 
         public override ResourceOptions GetDefaultOptions ()
         {
-            return new GyuOptions { Scheme = GetScheme (Properties.Settings.Default.GYUTitle) };
+            return new GyuOptions { Scheme = GetScheme (ArcFormats.Properties.Settings.Default.GYUTitle) };
         }
 
         public override object GetAccessWidget ()

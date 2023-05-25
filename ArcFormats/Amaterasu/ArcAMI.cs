@@ -31,7 +31,7 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Globalization;
 using GameRes.Compression;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 
 namespace GameRes.Formats.Amaterasu
 {
@@ -87,7 +87,7 @@ namespace GameRes.Formats.Amaterasu
     public class AmiOpener : ArchiveFormat
     {
         public override string         Tag { get { return "AMI"; } }
-        public override string Description { get { return Strings.arcStrings.AMIDescription; } }
+        public override string Description { get { return ArcFormats.Strings.arcStrings.AMIDescription; } }
         public override uint     Signature { get { return 0x00494D41; } } // 'AMI'
         public override bool  IsHierarchic { get { return false; } }
         public override bool      CanWrite { get { return true; } }
@@ -321,8 +321,8 @@ namespace GameRes.Formats.Amaterasu
         public override ResourceOptions GetDefaultOptions ()
         {
             return new AmiOptions {
-                UseBaseArchive = Properties.Settings.Default.AMIUseBaseArchive,
-                BaseArchive    = Properties.Settings.Default.AMIBaseArchive,
+                UseBaseArchive = ArcFormats.Properties.Settings.Default.AMIUseBaseArchive,
+                BaseArchive    = ArcFormats.Properties.Settings.Default.AMIBaseArchive,
             };
         }
 
@@ -342,7 +342,7 @@ namespace GameRes.Formats.Amaterasu
     public class ScrFormat : ScriptFormat
     {
         public override string Tag { get { return "SCR/AMI"; } }
-        public override string Description { get { return Strings.arcStrings.SCRDescription; } }
+        public override string Description { get { return ArcFormats.Strings.arcStrings.SCRDescription; } }
         public override uint Signature { get { return 0x00524353; } }
 
         public override ScriptData Read (string name, Stream stream)

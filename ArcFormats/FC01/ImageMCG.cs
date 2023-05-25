@@ -30,7 +30,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 
 namespace GameRes.Formats.FC01
 {
@@ -130,14 +130,14 @@ namespace GameRes.Formats.FC01
 
         public override ResourceOptions GetDefaultOptions ()
         {
-            return new McgOptions { Key = Properties.Settings.Default.MCGLastKey };
+            return new McgOptions { Key = ArcFormats.Properties.Settings.Default.MCGLastKey };
         }
 
         public override ResourceOptions GetOptions (object widget)
         {
             var w = widget as GUI.WidgetMCG;
             if (null != w)
-                Properties.Settings.Default.MCGLastKey = w.GetKey ();
+                ArcFormats.Properties.Settings.Default.MCGLastKey = w.GetKey ();
             return GetDefaultOptions();
         }
 
@@ -291,10 +291,10 @@ namespace GameRes.Formats.FC01
                     continue;
                 }
                 Transform();
-                Properties.Settings.Default.MCGLastKey = m_key;
+                ArcFormats.Properties.Settings.Default.MCGLastKey = m_key;
                 return;
             }
-            while (m_key != Properties.Settings.Default.MCGLastKey);
+            while (m_key != ArcFormats.Properties.Settings.Default.MCGLastKey);
             throw new UnknownEncryptionScheme();
         }
 

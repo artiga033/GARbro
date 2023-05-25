@@ -28,7 +28,7 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Security.Cryptography;
 using System.IO;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 using GameRes.Utility;
 
 namespace GameRes.Formats.Selene
@@ -143,7 +143,7 @@ namespace GameRes.Formats.Selene
         public override ResourceOptions GetDefaultOptions ()
         {
             return new KcapOptions {
-                PassPhrase = Properties.Settings.Default.KCAPPassPhrase,
+                PassPhrase = ArcFormats.Properties.Settings.Default.KCAPPassPhrase,
             };
         }
 

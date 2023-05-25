@@ -2,7 +2,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Linq;
 using GameRes.Formats.Properties;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 
 namespace GameRes.Formats.GUI
 {

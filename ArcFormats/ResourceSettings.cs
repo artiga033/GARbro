@@ -7,15 +7,15 @@ using System;
 using System.ComponentModel.Composition;
 using System.Diagnostics;
 using System.Text;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 
 namespace GameRes.Formats
 {
     internal class LocalResourceSetting : ResourceSettingBase
     {
         public override object Value {
-            get { return Properties.Settings.Default[Name]; }
-            set { Properties.Settings.Default[Name] = value; }
+            get { return ArcFormats.Properties.Settings.Default[Name]; }
+            set { ArcFormats.Properties.Settings.Default[Name] = value; }
         }
 
         public LocalResourceSetting () { }
@@ -60,17 +60,17 @@ namespace GameRes.Formats
     {
         public void UpgradeSettings ()
         {
-            if (Properties.Settings.Default.UpgradeRequired)
+            if (ArcFormats.Properties.Settings.Default.UpgradeRequired)
             {
-                Properties.Settings.Default.Upgrade();
-                Properties.Settings.Default.UpgradeRequired = false;
-                Properties.Settings.Default.Save();
+                ArcFormats.Properties.Settings.Default.Upgrade();
+                ArcFormats.Properties.Settings.Default.UpgradeRequired = false;
+                ArcFormats.Properties.Settings.Default.Save();
             }
         }
 
         public void SaveSettings ()
         {
-            Properties.Settings.Default.Save();
+            ArcFormats.Properties.Settings.Default.Save();
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using GameRes.Formats.Properties;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 using GameRes.Formats.YuRis;
 
 namespace GameRes.Formats.GUI

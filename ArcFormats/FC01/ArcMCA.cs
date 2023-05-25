@@ -23,7 +23,7 @@
 // IN THE SOFTWARE.
 //
 
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
@@ -113,14 +113,14 @@ namespace GameRes.Formats.FC01
 
         public override ResourceOptions GetDefaultOptions ()
         {
-            return new McgOptions { Key = Properties.Settings.Default.MCGLastKey };
+            return new McgOptions { Key = ArcFormats.Properties.Settings.Default.MCGLastKey };
         }
 
         public override ResourceOptions GetOptions (object widget)
         {
             var w = widget as GUI.WidgetMCG;
             if (null != w)
-                Properties.Settings.Default.MCGLastKey = w.GetKey ();
+                ArcFormats.Properties.Settings.Default.MCGLastKey = w.GetKey ();
             return GetDefaultOptions();
         }
 

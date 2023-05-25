@@ -1,7 +1,7 @@
 ﻿using System.Windows.Controls;
 using System.Linq;
 using GameRes.Formats.Eagls;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 
 namespace GameRes.Formats.GUI
 {

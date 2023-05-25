@@ -29,7 +29,7 @@ using System.ComponentModel.Composition;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 
 namespace GameRes.Formats.NScripter
 {
@@ -149,14 +149,14 @@ namespace GameRes.Formats.NScripter
 
         public override ResourceOptions GetDefaultOptions ()
         {
-            return new NsaOptions { Password = Properties.Settings.Default.NSAPassword };
+            return new NsaOptions { Password = ArcFormats.Properties.Settings.Default.NSAPassword };
         }
 
         public override ResourceOptions GetOptions (object widget)
         {
             var w = widget as GUI.WidgetNSA;
             if (null != w)
-                Properties.Settings.Default.NSAPassword = w.Password.Text;
+                ArcFormats.Properties.Settings.Default.NSAPassword = w.Password.Text;
             return GetDefaultOptions();
         }
 

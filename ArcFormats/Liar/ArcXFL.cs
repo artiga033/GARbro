@@ -29,7 +29,7 @@ using System.Text;
 using System.Linq;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 
 namespace GameRes.Formats.Liar
 {
@@ -37,7 +37,7 @@ namespace GameRes.Formats.Liar
     public class XflOpener : ArchiveFormat
     {
         public override string         Tag { get { return "XFL"; } }
-        public override string Description { get { return Strings.arcStrings.XFLDescription; } }
+        public override string Description { get { return ArcFormats.Strings.arcStrings.XFLDescription; } }
         public override uint     Signature { get { return 0x0001424c; } }
         public override bool  IsHierarchic { get { return true; } }
         public override bool      CanWrite { get { return true; } }
@@ -184,7 +184,7 @@ namespace GameRes.Formats.Liar
     public class GscFormat : ScriptFormat
     {
         public override string Tag { get { return "GSC"; } }
-        public override string Description { get { return Strings.arcStrings.GSCDescription; } }
+        public override string Description { get { return ArcFormats.Strings.arcStrings.GSCDescription; } }
         public override uint Signature { get { return 0; } }
 
         public override ScriptData Read (string name, Stream stream)

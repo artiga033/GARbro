@@ -29,7 +29,7 @@ using System.ComponentModel.Composition;
 using System.IO;
 using System.Linq;
 using GameRes.Compression;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 using GameRes.Utility;
 
 namespace GameRes.Formats.ShiinaRio // 椎名里緒
@@ -284,7 +284,7 @@ namespace GameRes.Formats.ShiinaRio // 椎名里緒
         public override ResourceOptions GetDefaultOptions ()
         {
             return new WarOptions {
-                Scheme = GetScheme (Properties.Settings.Default.WARCScheme),
+                Scheme = GetScheme (ArcFormats.Properties.Settings.Default.WARCScheme),
             };
         }
 

@@ -28,7 +28,7 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Globalization;
 using System.IO;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 using GameRes.Utility;
 
 namespace GameRes.Formats.Dac
@@ -192,8 +192,8 @@ namespace GameRes.Formats.Dac
         public override ResourceOptions GetDefaultOptions ()
         {
             return new DpkOptions {
-                Key1 = Properties.Settings.Default.DPKKey1,
-                Key2 = Properties.Settings.Default.DPKKey2,
+                Key1 = ArcFormats.Properties.Settings.Default.DPKKey1,
+                Key2 = ArcFormats.Properties.Settings.Default.DPKKey2,
             };
         }
 
@@ -204,9 +204,9 @@ namespace GameRes.Formats.Dac
             {
                 uint result_key;
                 if (uint.TryParse (widget.Key1.Text, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out result_key))
-                    Properties.Settings.Default.DPKKey1 = result_key;
+                    ArcFormats.Properties.Settings.Default.DPKKey1 = result_key;
                 if (uint.TryParse (widget.Key2.Text, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out result_key))
-                    Properties.Settings.Default.DPKKey2 = result_key;
+                    ArcFormats.Properties.Settings.Default.DPKKey2 = result_key;
             }
             return this.GetDefaultOptions();
         }

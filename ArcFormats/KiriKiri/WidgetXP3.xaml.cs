@@ -4,7 +4,7 @@ using System.Linq;
 using System.Windows.Controls;
 using System.Windows.Data;
 using GameRes.Formats.KiriKiri;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 
 namespace GameRes.Formats.GUI
 {
@@ -15,7 +15,7 @@ namespace GameRes.Formats.GUI
     {
         public WidgetXP3 ()
         {
-            var last_selected = Properties.Settings.Default.XP3Scheme;
+            var last_selected = ArcFormats.Properties.Settings.Default.XP3Scheme;
             InitializeComponent();
             var keys = new[] { new KeyValuePair<string, ICrypt> (arcStrings.ArcNoEncryption, Xp3Opener.NoCryptAlgorithm) };
             this.DataContext = keys.Concat (Xp3Opener.KnownSchemes.OrderBy (x => x.Key));

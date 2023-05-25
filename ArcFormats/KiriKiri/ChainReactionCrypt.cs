@@ -73,7 +73,7 @@ namespace GameRes.Formats.KiriKiri
 
         public override void Encrypt (Xp3Entry entry, long offset, byte[] values, int pos, int count)
         {
-            throw new NotImplementedException (Strings.arcStrings.MsgEncNotImplemented);
+            throw new NotImplementedException (ArcFormats.Strings.arcStrings.MsgEncNotImplemented);
             // despite the fact that algorithm is symmetric, creating an archive without updating "list.bin"
             // wouldn't make much sense
 //            Decrypt (entry, offset, values, pos, count);

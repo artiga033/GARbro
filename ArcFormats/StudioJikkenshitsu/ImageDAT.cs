@@ -29,7 +29,7 @@ using System.ComponentModel.Composition;
 using System.IO;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 
 // [010719][Studio Jikkenshitsu] Shin Gekka Bijin ~Hitori Shizuka
 // [030606][Studio Jikkenshitsu] Bias {biAs+}
@@ -125,7 +125,7 @@ namespace GameRes.Formats.Jikkenshitsu
 
         public override ResourceOptions GetDefaultOptions ()
         {
-            return new SjOptions { Key = GetKey (Properties.Settings.Default.SJDatTitle) };
+            return new SjOptions { Key = GetKey (ArcFormats.Properties.Settings.Default.SJDatTitle) };
         }
 
         public override object GetAccessWidget ()

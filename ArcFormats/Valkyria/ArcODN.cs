@@ -32,7 +32,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Media;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 using GameRes.Utility;
 
 namespace GameRes.Formats.Valkyria
@@ -77,7 +77,7 @@ namespace GameRes.Formats.Valkyria
 
         static string[] RequiredExtensions = new[] { "odn", "dat", "pni" };
 
-        FixedSetSetting AudioSampleRate = new FixedSetSetting (Properties.Settings.Default) {
+        FixedSetSetting AudioSampleRate = new FixedSetSetting (ArcFormats.Properties.Settings.Default) {
             Name = "ODNAudioSampleRate",
             Text = arcStrings.ODNAudioSampleRate,
             ValuesSet = new[] { 22050u, 44100u },

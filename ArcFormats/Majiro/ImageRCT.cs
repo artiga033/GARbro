@@ -33,7 +33,7 @@ using System.Diagnostics;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 using GameRes.Utility;
 
 namespace GameRes.Formats.Majiro
@@ -381,14 +381,14 @@ namespace GameRes.Formats.Majiro
 
         public override ResourceOptions GetDefaultOptions ()
         {
-            return new RctOptions { Password = Properties.Settings.Default.RCTPassword };
+            return new RctOptions { Password = ArcFormats.Properties.Settings.Default.RCTPassword };
         }
 
         public override ResourceOptions GetOptions (object widget)
         {
             var w = widget as GUI.WidgetRCT;
             if (null != w)
-                Properties.Settings.Default.RCTPassword = w.Password.Text;
+                ArcFormats.Properties.Settings.Default.RCTPassword = w.Password.Text;
             return GetDefaultOptions();
         }
 

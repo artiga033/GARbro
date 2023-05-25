@@ -36,7 +36,7 @@ namespace GameRes.Formats.Amaterasu
     public class GrpFormat : ImageFormat
     {
         public override string         Tag { get { return "GRP"; } }
-        public override string Description { get { return Strings.arcStrings.GRPDescription; } }
+        public override string Description { get { return ArcFormats.Strings.arcStrings.GRPDescription; } }
         public override uint     Signature { get { return 0x00505247; } } // 'GRP'
         public override bool      CanWrite { get { return true; } }
 

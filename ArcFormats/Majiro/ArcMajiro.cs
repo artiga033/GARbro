@@ -29,7 +29,7 @@ using System.Linq;
 using System.Text;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 using GameRes.Utility;
 
 namespace GameRes.Formats.Majiro

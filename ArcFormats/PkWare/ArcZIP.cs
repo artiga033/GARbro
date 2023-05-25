@@ -30,7 +30,7 @@ using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Text;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 
 using SharpZip = ICSharpCode.SharpZipLib.Zip;
 
@@ -126,7 +126,7 @@ namespace GameRes.Formats.PkWare
 
         internal ArcFile OpenZipArchive (ArcView file, Stream input)
         {
-            SharpZip.ZipStrings.CodePage = Properties.Settings.Default.ZIPEncodingCP;
+            SharpZip.ZipStrings.CodePage = ArcFormats.Properties.Settings.Default.ZIPEncodingCP;
             var zip = new SharpZip.ZipFile (input);
             try
             {
@@ -188,16 +188,16 @@ namespace GameRes.Formats.PkWare
         public override ResourceOptions GetDefaultOptions ()
         {
             return new ZipOptions {
-                CompressionLevel = Properties.Settings.Default.ZIPCompression,
+                CompressionLevel = ArcFormats.Properties.Settings.Default.ZIPCompression,
                 FileNameEncoding = ZipEncoding.Get<Encoding>(),
-                Password = Properties.Settings.Default.ZIPPassword,
+                Password = ArcFormats.Properties.Settings.Default.ZIPPassword,
             };
         }
 
         public override ResourceOptions GetOptions (object widget)
         {
             if (widget is GUI.WidgetZIP)
-                Properties.Settings.Default.ZIPPassword = ((GUI.WidgetZIP)widget).Password.Text;
+                ArcFormats.Properties.Settings.Default.ZIPPassword = ((GUI.WidgetZIP)widget).Password.Text;
             return GetDefaultOptions();
         }
 

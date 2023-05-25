@@ -31,7 +31,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml;
-using GameRes.Formats.Strings;
+using ArcFormats.Strings;
 using GameRes.Utility;
 
 namespace GameRes.Formats.Entis
@@ -235,8 +235,8 @@ namespace GameRes.Formats.Entis
         public override ResourceOptions GetDefaultOptions ()
         {
             return new NoaOptions {
-                Scheme = Properties.Settings.Default.NOAScheme,
-                PassPhrase = Properties.Settings.Default.NOAPassPhrase,
+                Scheme = ArcFormats.Properties.Settings.Default.NOAScheme,
+                PassPhrase = ArcFormats.Properties.Settings.Default.NOAPassPhrase,
             };
         }
 

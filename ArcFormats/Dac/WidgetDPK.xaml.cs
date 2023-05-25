@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 using GameRes.Formats.Dac;
-using GameRes.Formats.Properties;
+using ArcFormats.Properties;
 
 namespace GameRes.Formats.GUI
 {
